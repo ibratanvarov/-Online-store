@@ -1,20 +1,56 @@
 @extends('layouts.app')
 
-@section('title','Все категории')
+@section('title','Корзина')
 
 @section('content')
     <div class="starter-template">
-        @foreach($categories as $category)
-            <div class="panel">
-                <a href="/{{$category->code}}">
-                    <img src="http://internet-shop.tmweb.ru/storage/categories/mobile.jpg">
-                    <h2>{{$category->name}}</h2>
-                </a>
-                <p>
-                    {{$category->description}}
-                </p>
+        <p class="alert alert-success">Добавлен товар iPhone X 64GB</p>
+        <h1>Корзина</h1>
+        <p>Оформление заказа</p>
+        <div class="panel">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Кол-во</th>
+                    <th>Цена</th>
+                    <th>Стоимость</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <a href="http://internet-shop.tmweb.ru/mobiles/iphone_x_64">
+                            <img height="56px" src="http://internet-shop.tmweb.ru/storage/products/iphone_x.jpg">
+                            iPhone X 64GB
+                        </a>
+                    </td>
+                    <td><span class="badge">1</span>
+                        <div class="btn-group form-inline">
+                            <form action="http://internet-shop.tmweb.ru/basket/remove/1" method="POST">
+                                <button type="submit" class="btn btn-danger" href=""><span
+                                        class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
+                                <input type="hidden" name="_token" value="AWiSzU0iEReoa4g3PT33cIBMr18zKrIQDq0mHPg4">                            </form>
+                            <form action="http://internet-shop.tmweb.ru/basket/add/1" method="POST">
+                                <button type="submit" class="btn btn-success"
+                                        href=""><span
+                                        class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                                <input type="hidden" name="_token" value="AWiSzU0iEReoa4g3PT33cIBMr18zKrIQDq0mHPg4">                            </form>
+                        </div>
+                    </td>
+                    <td>71990 ₽</td>
+                    <td>71990 ₽</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Общая стоимость:</td>
+                    <td>71990 ₽</td>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+            <div class="btn-group pull-right" role="group">
+                <a type="button" class="btn btn-success" href="http://internet-shop.tmweb.ru/basket/place">Оформить заказ</a>
             </div>
-        @endforeach
-
+        </div>
     </div>
 @endsection

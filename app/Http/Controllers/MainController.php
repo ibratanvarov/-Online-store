@@ -28,4 +28,9 @@ class MainController extends Controller
     {
         return view('product',['product'=>$product]);
     }
+
+    public function basket()
+    {
+        return view('basket');
+    }
 }
