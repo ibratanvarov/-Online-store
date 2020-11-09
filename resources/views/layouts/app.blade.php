@@ -17,31 +17,21 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="http://internet-shop.tmweb.ru">Интернет Магазин</a>
+            <a class="navbar-brand" href="{{route('main.index')}}">Интернет Магазин</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="http://internet-shop.tmweb.ru">Все товары</a></li>
-                <li ><a href="http://internet-shop.tmweb.ru/categories">Категории</a>
+                <li class="active"><a href="{{route('main.index')}}">Все товары</a></li>
+                <li ><a href="{{route('main.categories')}}">Категории</a>
                 </li>
-                <li ><a href="http://internet-shop.tmweb.ru/basket">В корзину</a></li>
-                <li><a href="http://internet-shop.tmweb.ru/reset">Сбросить проект в начальное состояние</a></li>
+                <li ><a href="{{route('main.basket')}}">В корзину</a></li>
+                <li><a href="{{route('main.index')}}">Сбросить проект в начальное состояние</a></li>
                 <li><a href="http://internet-shop.tmweb.ru/locale/en">en</a></li>
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">₽<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="http://internet-shop.tmweb.ru/currency/RUB">₽</a></li>
-                        <li><a href="http://internet-shop.tmweb.ru/currency/USD">$</a></li>
-                        <li><a href="http://internet-shop.tmweb.ru/currency/EUR">€</a></li>
-                    </ul>
-                </li>
-            </ul>
+{{--            <ul class="nav navbar-nav navbar-right">--}}
+{{--                <li><a href="http://internet-shop.tmweb.ru/login">Панель администратора </a></li>--}}
 
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://internet-shop.tmweb.ru/login">Панель администратора </a></li>
-
-            </ul>
+{{--            </ul>--}}
         </div>
     </div>
 </nav>

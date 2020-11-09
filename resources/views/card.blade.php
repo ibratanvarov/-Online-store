@@ -8,13 +8,12 @@
                         <h3>iPhone X 64GB</h3>
                         <p>71990 ₽</p>
                         <p>
-                        <form action="http://internet-shop.tmweb.ru/basket/add/1" method="POST">
-                            <button type="submit" class="btn btn-primary" role="button">В корзину</button>
-                            <a href="http://internet-shop.tmweb.ru/mobiles/iphone_x_64"
-                               class="btn btn-default"
-                               role="button">Подробнее</a>
-                            <input type="hidden" name="_token" value="AW6DmQT00Jupye2ShkLrw3KZZXcqfn3oMPP1OVbz">            </form>
+                           <a href="{{route('main.basket')}}" class="btn btn-primary" role="button">В карзину</a>
+                            @isset($category)
+                            {{$category ->name}}
+                            @endisset
+                            <a href="http://laravel-diplom-1.rdavydov.ru/mobiles/iphone_x_64 " class="btn btn-default" role="button">Подробнее</a>
                         </p>
                     </div>
                 </div>
-            </div>
+</div>
