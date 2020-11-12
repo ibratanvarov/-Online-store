@@ -8,8 +8,12 @@
                         <h3>{{$product->name}}</h3>
                         <p>{{$product->price}}</p>
                         <p>
-                           <a href="{{route('main.basket')}}" class="btn btn-primary" role="button">В карзину</a>
-                           <a href="{{route('main.product',[$product->category->code, $product->code])}}" class="btn btn-default" role="button">Подробнее</a></p>
+                        <form action ="{{route('basket-add', $product)}}" method = "POST">
+                             <button type="submit" class="btn btn-primary" role="button">В карзину</button>
+                             <a href="{{route('main.product',[$product->category->code, $product->code])}}" class="btn btn-default" role="button">Подробнее</a>
+                             @csrf
+                        </form>
+                        </p>
                     </div>
                 </div>
 </div>
